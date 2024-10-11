@@ -43,7 +43,7 @@ const Login = () => {
       
       {/* Success Alert */}
       <div
-        className="text-center alert bg-rose-300 w-1/2 mx-auto text-white rounded-md"
+        className="text-center alert bg-purple-400 w-1/2 mx-auto text-white rounded-md"
         role="alert"
         style={{ display: status === "Success" ? "" : "none" }}
       >
@@ -52,7 +52,7 @@ const Login = () => {
 
       {/* Failed Alert */}
       <div
-        className="text-center alert bg-neutral-200 w-1/2 mx-auto text-black rounded-md"
+        className="text-center alert bg-neutral-100 w-1/2 mx-auto text-black rounded-md"
         role="alert"
         style={{ display: status === "Failed" ? "" : "none" }}
       >
@@ -63,7 +63,7 @@ const Login = () => {
       {/* Login Form */}
       <form
         onSubmit={handleSubmit}
-        className="bg-neutral-200 mx-auto w-[90vw] md:w-[50vw] p-6 rounded-lg shadow-md"
+        className="bg-neutral-50 mx-auto w-[90vw] md:w-[50vw] p-6 rounded-lg shadow-md mt-4"
       >
         <div className="mb-4">
           <label
@@ -79,7 +79,7 @@ const Login = () => {
             type="email"
             value={credentials.email}
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="bg-purple-200  shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
 
@@ -97,7 +97,9 @@ const Login = () => {
             type="password"
             value={credentials.password}
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          
+            className="bg-purple-200 shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
+            
           />
         </div>
 

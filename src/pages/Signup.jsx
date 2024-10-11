@@ -43,21 +43,21 @@ const Signup = () => {
 
   return (
     <div className="py-20">
-      <div className="flex flex-col items-center" style={{ display: status === "Pending" ? "" : "none" }}>
+      <div className="flex flex-col items-center " style={{ display: status === "Pending" ? "" : "none" }}>
         <div className="loader"></div>
         <p>Please wait..</p>
       </div>
 
-      <div className="text-center alert bg-rose-300 w-1/2 mx-auto text-white rounded-md" role="alert" style={{display:status==="Passwords do not match"?"":"none"}}>
+      <div className="text-center alert bg-purple-300 w-1/2 mx-auto text-white rounded-md" role="alert" style={{display:status==="Passwords do not match"?"":"none"}}>
         <h1 className="font-bold">Passwords do not match</h1>
       </div>
 
-      <div className="text-center alert bg-rose-300 w-1/2 mx-auto text-white rounded-md" role="alert" style={{display:status==="Success"?"":"none"}}>
+      <div className="text-center alert bg-purple-300 w-1/2 mx-auto text-white rounded-md" role="alert" style={{display:status==="Success"?"":"none"}}>
         <h1 className="font-bold">Congratulations</h1>
         <p>You are signed up</p>
       </div>
 
-      <div className="text-center alert bg-neutral-200 w-1/2 mx-auto text-black rounded-md" role="alert" style={{display:status==="Failed"?"":"none"}}>
+      <div className="text-center alert bg-neutral-100 w-1/2 mx-auto text-black rounded-md " role="alert" style={{display:status==="Failed"?"":"none"}}>
         <h1 className="font-bold">Oops, signup failed</h1>
         Please try again.
       </div>
@@ -65,7 +65,7 @@ const Signup = () => {
       <form
         ref={form}
         onSubmit={handleSubmit}
-        className="bg-neutral-200 mx-auto w-[90vw] md:w-[50vw] p-6 rounded-lg shadow-md"
+        className="bg-neutral-50 mx-auto w-[90vw] md:w-[50vw] p-6 rounded-lg shadow-md mt-4"
       >
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
@@ -78,7 +78,7 @@ const Signup = () => {
             type="text"
             value={credentials.name}
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-purple-200 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
 
@@ -93,7 +93,7 @@ const Signup = () => {
             type="email"
             value={credentials.email}
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-purple-200 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
 
@@ -108,7 +108,7 @@ const Signup = () => {
             type="password"
             value={credentials.password}
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-purple-200 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
 
@@ -123,7 +123,7 @@ const Signup = () => {
             type="password"
             value={credentials.confirmPassword}
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-purple-200 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
 

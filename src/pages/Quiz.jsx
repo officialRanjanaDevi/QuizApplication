@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import LoadingBox from "../components/QuizBox/LoadingBox";
 import QuizBox from "../components/QuizBox/QuizBox";
@@ -8,6 +9,7 @@ import "./Style.css";
 
 
 const Quiz = () => {
+  const navigate=useNavigate();
   const [data, setData] = useState({});
   const [count, setCount] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -60,12 +62,21 @@ const Quiz = () => {
         <ScoreBoard score={score} solved={count} timmer={true}/>
         <ScoreCard count={count} />
         <button
-          className="neu-button "
+          className="px-6 py-2 font-bold text-lg text-white"
           onClick={handleclick}
           disabled={loading}
           style={{display:count>0?"none":""}}
         >
          Start
+        </button>
+
+        <button
+          className="px-6 py-2 font-bold text-lg text-white mt-12"
+          style={{display:count>0?"none":""}}
+          onClick={()=>{navigate('/logout')}}
+        >
+
+         Logout
         </button>
 
       {loading && (
