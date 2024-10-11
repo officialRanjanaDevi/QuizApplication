@@ -6,7 +6,7 @@ const Home = () => {
       navigate('/quiz');
   }  
   return (
-    <div>
+    <div className='h-full'>
       <h1>Welcome to quiz assessment</h1>
       <button onClick={startQuiz}>Start quiz</button>
     </div>
