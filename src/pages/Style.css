@@ -1,0 +1,21 @@
+/* From Uiverse.io by adamgiebl */ 
+.neu-button {
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    box-shadow: inset 4px 4px 10px #dddddd, inset -4px -4px 10px #ffffff;
+    color: #080808;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 40px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid rgb(206, 206, 206);
+  }
+  
+  .neu-button:hover {
+    box-shadow: inset 2px 2px 5px #dddddd, inset -2px -2px 5px #ffffff, 2px 2px 5px #dddddd, -2px -2px 5px #ffffff;
+  }
+  
+  .neu-button:focus {
+    outline: none;
+    box-shadow: inset 2px 2px 5px #dddddd, inset -2px -2px 5px #ffffff, 2px 2px 5px #dddddd, -2px -2px 5px #ffffff;
+  }
